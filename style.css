@@ -43,7 +43,7 @@ body {
     isolation: isolate;
     min-height: 100vh;
 
-    background-image: url(../images/whitesession-man.jpg);
+    background-image: url(./images/whitesession-man.jpg);
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
