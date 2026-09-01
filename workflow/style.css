@@ -56,14 +56,14 @@ body {
     inset: 0;
     opacity: 1;
     background: linear-gradient(90deg, rgba(6, 6, 4, 0.82), rgba(6, 6, 4, 0.54));
-    z-index: 1;
+    z-index: 999;
     pointer-events: none;
-    animation: mainBg 1.6s ease-in-out forwards;
+    animation: mainBg 2s ease-in-out forwards;
 }
 
 @keyframes mainBg {
-    0% {
-        opacity: 1;
+    90% {
+        opacity: 0;
         transform: translateX(0);
     }
 
@@ -129,8 +129,8 @@ nav {
     gap: 2rem;
     padding: 2rem;
     background-color: var(--primary-color);
-    border-top: 1px solid rgba(255, 255, 255, 0.08);
-    transition: transform 0.5s ease, opacity 0.3s ease;
+    border-top: 1px solid transparent;
+    transition: transform 0.5s ease, opacity 0.3s ease, border-color 0.3s ease;
     z-index: 3;
     opacity: 0;
     pointer-events: none;
@@ -140,6 +140,7 @@ nav {
     transform: translateY(100%);
     opacity: 1;
     pointer-events: auto;
+    border-top-color: rgba(255, 255, 255, 0.08);
 }
 
 .nav-links a {
@@ -275,12 +276,14 @@ button:hover {
         position: static;
         width: auto;
         margin-left: auto;
-        gap: 3rem;
         flex-direction: row;
         gap: 1rem;
         padding: 0;
         background-color: transparent;
+        opacity: 1;
+        pointer-events: auto;
         transform: none !important;
+        visibility: visible;
     }
 
     .nav-links a:hover {
